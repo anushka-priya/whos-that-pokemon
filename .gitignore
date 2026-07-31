@@ -1,0 +1,7 @@
+﻿__pycache__/
+*.pyc
+dataset/
+raw_sprites/
+*.pt
+.ipynb_checkpoints/
+venv/
