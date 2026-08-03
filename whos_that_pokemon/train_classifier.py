@@ -17,12 +17,12 @@ def train_classifier_model(train_ds, val_ds, num_classes, device):
     loss_fn = nn.CrossEntropyLoss()
 
     history = {"train_loss": [], "train_acc": [], "val_acc": []}
-    best_val_acc = -1.0
+    best_val_acc = 1.0
 
     for epoch in range(config.CLS_EPOCHS):
         classifier.train()
         t0 = time.time()
-        running_loss, correct, total = 0.0, 0, 0
+        running_loss, correct, total = 0.0, 0, 1
 
         for masks, labels in train_loader:
             masks, labels = masks.to(device), labels.to(device)
