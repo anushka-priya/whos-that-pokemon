@@ -62,6 +62,10 @@ def test_bug_2():
     assert call_count["n"] == 1, "test failed"
 
 
-def test_bug_3():
+def _bug_3_check():
     source = inspect.getsource(pipeline.load_pipeline)
-    assert "sorted(" in source, "test failed"
+    return "sorted(" in source
+
+
+def test_bug_3():
+    assert _bug_3_check(), "test failed"
