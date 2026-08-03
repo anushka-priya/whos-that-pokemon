@@ -1,0 +1,37 @@
+segmentation:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'whos_that_pokemon/models.py'
+      - 'whos_that_pokemon/train_segmentation.py'
+      - 'whos_that_pokemon/losses.py'
+
+classification:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'whos_that_pokemon/train_classifier.py'
+
+data-pipeline:
+  - changed-files:
+    - any-glob-to-any-file: 'whos_that_pokemon/data_prep.py'
+
+pipeline:
+  - changed-files:
+    - any-glob-to-any-file: 'whos_that_pokemon/pipeline.py'
+
+evaluation:
+  - changed-files:
+    - any-glob-to-any-file: 'whos_that_pokemon/evaluate.py'
+
+datasets:
+  - changed-files:
+    - any-glob-to-any-file: 'whos_that_pokemon/datasets.py'
+
+visualization:
+  - changed-files:
+    - any-glob-to-any-file: 'whos_that_pokemon/visualize.py'
+
+docs:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'README.md'
+      - 'CONTRIBUTING.md'
