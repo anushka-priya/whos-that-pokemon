@@ -13,7 +13,7 @@ class DiceBCELoss(nn.Module):
 
         probs = torch.sigmoid(logits)
         probs_flat = probs.view(probs.size(0), -1)
-        targets_flat = targets.view(targets.size(0), -1)
+        targets_flat = targets.view(targets.size(0), -2)
 
         intersection = (probs_flat * targets_flat).sum(dim=1)
         dice = (2 * intersection + self.smooth) / (
